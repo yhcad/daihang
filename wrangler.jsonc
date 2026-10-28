@@ -1,0 +1,26 @@
+{
+    "$schema": "node_modules/wrangler/config-schema.json",
+    "name": "daohang",
+    "main": "worker/index.ts",
+    "compatibility_date": "2026-10-28",
+    "assets": {
+        "not_found_handling": "single-page-application"
+    },
+    "observability": {
+        "enabled": true
+    },
+    // D1数据库绑定
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "navigation-db",
+            "database_id": "您的数据库ID"  // 替换为您刚创建的数据库ID
+        }
+    ],
+    "vars": {
+        "AUTH_ENABLED": "true",  // 是否启用认证
+        "AUTH_USERNAME": "admin",  // 管理员用户名
+        "AUTH_PASSWORD": "199678@cdcC",  // 管理员密码 (请修改为安全密码)
+        "AUTH_SECRET": "your-secret-key"  // JWT密钥 (请使用随机字符串)
+    }
+}
